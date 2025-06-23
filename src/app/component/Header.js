@@ -37,8 +37,8 @@ export default function Header() {
             </a>
           </div>
           <div className="flex items-center space-x-4 text-sm">
-            <a href="#" className="text-gray-600 hover:text-primary hover:text-yellow-500">Blog</a>
-            <a href="#" className="text-gray-600 hover:text-primary hover:text-yellow-500">Help Center</a>
+            <a href="/blog" className="text-gray-600 hover:text-primary hover:text-yellow-500">Blog</a>
+            <a href="/helpCenter" className="text-gray-600 hover:text-primary hover:text-yellow-500">Help Center</a>
             <div className="h-4 w-px bg-gray-200 mx-2"></div>
             <div className="flex items-center space-x-3">
               <a href="#" className="w-6 h-6 flex items-center justify-center text-gray-600 hover:text-primary hover:text-yellow-500">
@@ -74,10 +74,13 @@ export default function Header() {
               </button>
               {collegesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-3 hover:text-yellow-500">
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Top Colleges</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Engineering Colleges</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Medical Colleges</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Business Schools</Link>
+<Link href="/colleges/topcolleges" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">
+  Top Colleges
+</Link>
+
+                  <Link href="/colleges/EngineeringColleges"className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Engineering Colleges</Link>
+                  <Link href="/colleges/medicalCOlleges" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Medical Colleges</Link>
+                  <Link href="/colleges/businessSchools" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Business Schools</Link>
                 </div>
               )}
             </div>
@@ -92,10 +95,10 @@ export default function Header() {
               </button>
               {coursesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-3 hover:text-yellow-500">
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Engineering</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Medical</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Business</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Arts & Science</Link>
+                  <Link href="/courses/engineering" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Engineering</Link>
+                  <Link href="/courses/medical" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Medical</Link>
+                  <Link href="/courses/business" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Business</Link>
+                  <Link href="/courses/art&science" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Arts & Science</Link>
                 </div>
               )}
             </div>
@@ -109,9 +112,9 @@ export default function Header() {
               </button>
               {examsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-3 hover:text-yellow-500">
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Entrance Exams</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Competitive Exams</Link>
-                  <Link href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Study Material</Link>
+                  <Link href="/exams/entrance" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Entrance Exams</Link>
+                  <Link href="/exams/competetive" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Competitive Exams</Link>
+                  <Link href="/exams/studymaterial" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-yellow-500">Study Material</Link>
                 </div>
               )}
             </div>
@@ -129,7 +132,7 @@ export default function Header() {
               Search
             </button>
             <div className="h-6 w-px bg-gray-200"></div>
-            <Link href="#" className="flex items-center text-gray-700 hover:text-primary hover:text-yellow-500">
+            <Link href="/signIn" className="flex items-center text-gray-700 hover:text-primary hover:text-yellow-500">
               <div className="w-5 h-5 flex items-center justify-center mr-1">
                 <IoPersonOutline className="ri-user-line"/>
               </div>
@@ -195,8 +198,17 @@ export default function Header() {
                   )}
                 </div>
 
-                <Link href="#" className="text-gray-700 py-2">Resources</Link>
-                <Link href="#" className="text-gray-700 py-2">Counselling</Link>
+ <Link href="/resources" className="text-gray-700 py-2">
+  Resources
+</Link>
+
+<Link href="/counselling" className="text-gray-700 py-2">
+  Counselling
+</Link>
+
+
+
+
                 <div className="pt-4 border-t border-gray-100">
                   <button className="w-full bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors duration-300 ">Sign In</button>
                 </div>

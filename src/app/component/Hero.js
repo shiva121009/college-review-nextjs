@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { RiBookOpenLine, RiMapPinLine,RiPhoneLine, RiCircle } from 'react-icons/ri';
+import { RiBookOpenLine, RiMapPinLine,RiPhoneLine } from 'react-icons/ri';
 import { FaRegCircle } from "react-icons/fa6";
 export default function HeroSection() {
   return (
